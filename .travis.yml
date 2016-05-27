@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - 2.3.1
+install:
+  - bundle intall
+before_script:
+  - psql -c 'create database my_awesome_project_test;' -U postgres
+services:
+  - postgresql
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "https://mighty-sierra-62861.herokuapp.com"
+addons:
+  code_climate:
+    repo_token: 1a9a2531ebc83ed18de2032bfd74e70dcafc26c6

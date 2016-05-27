@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 # https://github.com/bkeepers/dotenv#rails
 gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -31,6 +32,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# code-climate-reporter
+gem "codeclimate-test-reporter", group: :test
+# Annotation Gem - Because AndrewEk Workflow, that's why
+gem 'annotate'
+# Guard::Minitest - Will test code and give feedback
+group :development do
+  gem 'guard' # this is necessary in newer versions
+  gem 'guard-minitest'
+end
+# Guard notifier - Let's you know status of your tests
+gem 'terminal-notifier-guard', '~>1.6.1'
+# 12factor helps with Heroku Deployment
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
