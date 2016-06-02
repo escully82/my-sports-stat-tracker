@@ -1,20 +1,17 @@
 sudo: required
-
-
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 install:
-  - bundle install
+- bundle install
 before_script:
-  - psql -c 'create database my_awesome_project_test;' -U postgres
+- psql -c 'create database my_awesome_project_test;' -U postgres
 services:
-  - postgresql
-
+- postgresql
 deploy:
   provider: heroku
   api_key:
-    secure: "https://mighty-sierra-62861.herokuapp.com"
+    secure: hyAplwvgWIAX7gUuufk29i2QjJrZbNxBTvtBdrOSDUk0MNkUsnZzB7NXVj92MZZxWrEqv/df9TUxNFdTv0bbMFqtmUrh45ijs3DeEoJuP33WZFPyjZy5ZCDADnVNIkWPm+xEeuhOvAyMldKXf+YKTGXAjRjmYmaLOm6FeURYwntLICZFsyswn2tmDYTYRphT4iMKWLncILz9kb6v57RVHu3n3LVCPyBuXnhbg2bE+eJXcXloA18CcGN+wQXEeG7mHOn6gGyHasGWPoehT7AIO5totpvmFcJ+sWwHsdvcSWC8H5jfPuq08Pf8UYx5RoDOTCAb1qPI/a60d3qkrkBLEQDzluoW4qIAmEAgumtQwY4pQAYX/pQc6gc2SfXlU0fjqsG2hhseeesMURpvPP1ZprgEOfFEyYKucGc6SM05OEZRzcv+e++8IImiFMYKlW60lQAIQOV93UBmdLp3cuNg2DQK6ZsxyO661UfW0+LoVplPJqKpO98o927IWHR9Z22DP+lV8rhu646IVqqh+FTV/m+cg+fvZJ1LNUlGm9YGFNC6iTcG5vm6NdQagskeQLzRr3883Y4oAK/J+W9w9H/FWlY64CRtwMjeWYX321d+Y2kUGQM6QsITgQRMDvVma0SwJa8O1X/ErkDTPvknOLRVOTr0DyJJwXVDQZgrsYgJ92c=
+   app: mighty-sierra-62861
 addons:
-  code_climate:
-    repo_token: 1a9a2531ebc83ed18de2032bfd74e70dcafc26c6
+  code_climate: 12ed54845110dbb8f6e0e2e67e02665e9131b4fa219913315095a9f5c5e8ca47

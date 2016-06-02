@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pass: 1
+  rush: 1
+  rec: 1
+  off_yards: 1
+  off_td: 1
+  xp_1: 1
+  xp_2: 1
+  off_int: 1
+  off_fum: 1
+  tkl: 1
+  sack: 1
+  def_int: 1
+  ffum: 1
+  fmrc: 1
+  pbu: 1
+  def_td: 1
+  def_xp: 1
+  player_id: 1
+
+two:
+  pass: 1
+  rush: 1
+  rec: 1
+  off_yards: 1
+  off_td: 1
+  xp_1: 1
+  xp_2: 1
+  off_int: 1
+  off_fum: 1
+  tkl: 1
+  sack: 1
+  def_int: 1
+  ffum: 1
+  fmrc: 1
+  pbu: 1
+  def_td: 1
+  def_xp: 1
+  player_id: 1

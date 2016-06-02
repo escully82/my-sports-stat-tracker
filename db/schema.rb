@@ -11,9 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160602012122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.string   "number"
+    t.string   "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.integer  "pass"
+    t.integer  "rush"
+    t.integer  "rec"
+    t.integer  "off_yards"
+    t.integer  "off_td"
+    t.integer  "xp_1"
+    t.integer  "xp_2"
+    t.integer  "off_int"
+    t.integer  "off_fum"
+    t.integer  "tkl"
+    t.integer  "sack"
+    t.integer  "def_int"
+    t.integer  "ffum"
+    t.integer  "fmrc"
+    t.integer  "pbu"
+    t.integer  "def_td"
+    t.integer  "def_xp"
+    t.integer  "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
