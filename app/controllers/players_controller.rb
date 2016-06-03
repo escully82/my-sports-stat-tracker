@@ -17,7 +17,7 @@ class PlayersController < ApplicationController
       flash.now[:alert] = "Sorry, missed the cut"
       render :new
     end
-    
+
   end
 
   def show
@@ -45,7 +45,7 @@ class PlayersController < ApplicationController
   end
 
   private
-    def players_params
+    def player_params
       params.require(:player).permit(:name, :position, :number)
     end
 
