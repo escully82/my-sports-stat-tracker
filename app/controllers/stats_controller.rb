@@ -13,7 +13,7 @@ class StatsController < ApplicationController
     if @stat.save
       redirect_to :stats
     else
-      flash.now[:alert] = "Stat not saved."
+      flash.now[:alert] = "Save unsuccessful"
       render :new
     end
   end

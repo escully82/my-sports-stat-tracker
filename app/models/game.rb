@@ -12,4 +12,13 @@
 #
 
 class Game < ActiveRecord::Base
+
+  validates :game_time,     presence: true
+  validates :game_location, presence: true
+  validates :home_team,     presence: true
+  validates :away_team,     presence: true
+
+  belongs_to :team
+  has_many   :stats
+
 end

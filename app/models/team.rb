@@ -14,5 +14,6 @@ class Team < ActiveRecord::Base
   validates :player,   presence: true
 
   has_many :players
+  has_many :games
 
 end

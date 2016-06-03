@@ -30,5 +30,6 @@ class Stat < ActiveRecord::Base
   validates :player, presence: true
 
   belongs_to :player
-  
+  belongs_to :game
+
 end

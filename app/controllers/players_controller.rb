@@ -30,7 +30,7 @@ class PlayersController < ApplicationController
 
   def update
     @player = Player.find(params[:id])
-    if @player.update_attributes(insect_params)
+    if @player.update_attributes(player_params)
       redirect_to players_path, notice: "Update successful!"
     else
       flash.now[:alert] = "Sorry, unsuccessful. Try again."
